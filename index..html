@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>歷史平行時空：15 分鐘串聯同年代的世界大事｜互動原型</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;800&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { navy:'#0f2347', navy2:'#1b3a6b', cream:'#f7f0e0', amber2:'#d9a441', amberd:'#a8741a', ink:'#14213d' },
+  fontFamily: { serif:['"Noto Serif TC"','Songti TC','serif'], sans:['"Noto Sans TC"','"PingFang TC"','"Microsoft JhengHei"','sans-serif'] }
+}}};
+</script>
+<style>
+  body { background:#f7f0e0; color:#14213d; }
+  .view { display:none } .view.on { display:block }
+  .tab { color:#cdd7ea; border:2px solid transparent; }
+  .tab:hover { background:#1b3a6b; }
+  .tab.on { background:#d9a441; color:#0f2347; font-weight:700; border-color:#f7f0e0; }
+  .grid-map { background-color:#14305d; background-image:linear-gradient(rgba(217,164,65,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(217,164,65,.14) 1px,transparent 1px); background-size:32px 32px; }
+  .chip.on { background:#d9a441; color:#0f2347; border-color:#d9a441; }
+  .reg.on { background:#0f2347; color:#f7f0e0; border-color:#0f2347; }
+  .opt.sel-bad { border-color:#c0392b; background:#fbe3df; }
+  .opt.sel-ok { border-color:#1e8a5a; background:#dcf2e6; }
+  :focus-visible { outline:3px solid #d9a441; outline-offset:2px; }
+  .tabs { scrollbar-width:none } .tabs::-webkit-scrollbar { display:none }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- 固定頂部導覽列 -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 bg-navy text-cream border-b-4 border-amber2 shadow-lg" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-full bg-amber2 text-navy grid place-items-center text-lg"><i class="fa-solid fa-earth-asia"></i></span>
+      <h1 class="font-serif font-extrabold text-base md:text-xl leading-snug">《歷史平行時空：15 分鐘串聯同年代的世界大事》</h1>
+    </div>
+    <nav class="tabs flex gap-2 overflow-x-auto -mx-1 px-1 pb-1 lg:pb-0" aria-label="分頁切換">
+      <button class="tab btn shrink-0 rounded-full px-4 py-2 text-sm" data-v="u1"><i class="fa-solid fa-compass mr-1"></i>單元 1 示意</button>
+      <button class="tab btn shrink-0 rounded-full px-4 py-2 text-sm" data-v="u2"><i class="fa-solid fa-circle-play mr-1"></i>單元 2 課程頁</button>
+      <button class="tab btn shrink-0 rounded-full px-4 py-2 text-sm" data-v="u2p"><i class="fa-solid fa-robot mr-1"></i>單元 2 練習頁 (AI 互動)</button>
+      <button class="tab btn shrink-0 rounded-full px-4 py-2 text-sm" data-v="u3"><i class="fa-solid fa-pen-to-square mr-1"></i>單元 3 測驗頁</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="max-w-6xl mx-auto px-4 md:px-6 pb-12" style="padding-top:130px">
+
+<!-- ===== 單元 1 ===== -->
+<section id="u1" class="view">
+  <div class="flex flex-wrap items-center gap-3 mb-2">
+    <h2 class="font-serif font-extrabold text-2xl md:text-3xl">單元 1　打破課本界線：認識橫向時間軸</h2>
+    <span class="bg-navy text-cream rounded-full px-3 py-1 text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i>預計 5 分鐘</span>
+  </div>
+  <p class="text-ink/75 mb-6">課本把歷史切成三本，但事件從來不是各自發生的。</p>
+
+  <div class="grid md:grid-cols-3 gap-4 mb-8">
+    <div class="bg-white rounded-2xl border border-navy/15 p-5 shadow-sm"><i class="fa-solid fa-bullseye text-amberd text-2xl"></i><h3 class="font-bold mt-2">學習目標 1</h3><p class="text-sm text-ink/80 mt-1">說明「直向背誦」與「橫向對照」的差別。</p></div>
+    <div class="bg-white rounded-2xl border border-navy/15 p-5 shadow-sm"><i class="fa-solid fa-anchor text-amberd text-2xl"></i><h3 class="font-bold mt-2">學習目標 2</h3><p class="text-sm text-ink/80 mt-1">學會用「同一個年份」當錨點，串起各地大事。</p></div>
+    <div class="bg-white rounded-2xl border border-navy/15 p-5 shadow-sm"><i class="fa-solid fa-link text-amberd text-2xl"></i><h3 class="font-bold mt-2">學習目標 3</h3><p class="text-sm text-ink/80 mt-1">看出臺灣、中國與世界事件之間的連動關係。</p></div>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-6">
+    <div class="bg-white rounded-2xl border-2 border-navy/20 p-6">
+      <h3 class="font-serif font-extrabold text-xl mb-1"><i class="fa-solid fa-grip-lines-vertical text-ink/50 mr-2"></i>傳統直向背誦</h3>
+      <p class="text-sm text-ink/70 mb-4">臺灣史、中國史、世界史分開記，彼此看不到關聯。</p>
+      <div class="grid grid-cols-3 gap-3 text-center text-sm">
+        <div class="rounded-xl bg-cream border border-navy/15 p-3"><b class="block mb-2">臺灣史</b><p class="py-1">原住民社會</p><p class="py-1">荷西時期</p><p class="py-1">鄭氏政權</p></div>
+        <div class="rounded-xl bg-cream border border-navy/15 p-3"><b class="block mb-2">中國史</b><p class="py-1">明朝中期</p><p class="py-1">明末動盪</p><p class="py-1">清朝建立</p></div>
+        <div class="rounded-xl bg-cream border border-navy/15 p-3"><b class="block mb-2">世界史</b><p class="py-1">大航海</p><p class="py-1">宗教改革</p><p class="py-1">三十年戰爭</p></div>
+      </div>
+      <p class="mt-4 text-sm text-ink/70"><i class="fa-solid fa-circle-xmark text-red-600 mr-1"></i>各自成章，容易變成零散的年代表。</p>
+    </div>
+    <div class="grid-map text-cream rounded-2xl border-2 border-amber2 p-6">
+      <h3 class="font-serif font-extrabold text-xl mb-1"><i class="fa-solid fa-grip-lines text-amber2 mr-2"></i>平行時空橫向對照</h3>
+      <p class="text-sm text-cream/80 mb-4">用同一個年份，把各地大事排在同一條線上。</p>
+      <div class="relative pl-1">
+        <div class="flex items-center gap-3 mb-3"><span class="w-24 shrink-0 text-right font-bold text-amber2">1624 年</span><span class="h-0.5 flex-1 bg-amber2"></span></div>
+        <div class="grid grid-cols-3 gap-2 text-center text-sm">
+          <div class="rounded-xl bg-white/10 border border-white/25 p-3"><i class="fa-solid fa-ship mb-1 text-amber2"></i><p class="font-bold">臺灣</p><p>荷蘭人建立據點</p></div>
+          <div class="rounded-xl bg-white/10 border border-white/25 p-3"><i class="fa-solid fa-landmark mb-1 text-amber2"></i><p class="font-bold">中國</p><p>明朝天啟年間</p></div>
+          <div class="rounded-xl bg-white/10 border border-white/25 p-3"><i class="fa-solid fa-shield-halved mb-1 text-amber2"></i><p class="font-bold">歐洲</p><p>三十年戰爭</p></div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm"><i class="fa-solid fa-circle-check text-green-400 mr-1"></i>同一年一次看三地，因果與背景自然浮現。</p>
+    </div>
+  </div>
+
+  <div class="mt-8 bg-white rounded-2xl border-l-8 border-amber2 p-6 flex flex-col md:flex-row md:items-center gap-5 justify-between shadow-sm">
+    <div>
+      <p class="text-sm font-bold text-amberd mb-1"><i class="fa-solid fa-microphone mr-1"></i>旁白重點預覽</p>
+      <p class="font-serif text-lg md:text-xl leading-relaxed">「同學，今天我們不翻三本書，只問一個問題：<b>同一年，世界的其他地方在發生什麼事？</b>」</p>
+    </div>
+    <button class="go btn shrink-0 bg-navy text-cream font-bold rounded-full px-6 py-3 text-lg hover:bg-navy2" data-v="u2">進入單元 2 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+  </div>
+</section>
+
+<!-- ===== 單元 2 課程頁 ===== -->
+<section id="u2" class="view">
+  <div class="flex flex-wrap items-center gap-3 mb-6">
+    <h2 class="font-serif font-extrabold text-2xl md:text-3xl">單元 2　17 世紀的平行時空：當荷蘭人來到臺灣</h2>
+    <span class="bg-amber2 text-navy rounded-full px-3 py-1 text-sm font-bold">核心課程</span>
+  </div>
+  <div class="grid lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2">
+      <div id="player" class="relative aspect-video rounded-2xl overflow-hidden bg-navy shadow-xl grid-map">
+        <div class="absolute top-3 left-3 bg-amber2 text-navy text-xs md:text-sm font-bold px-3 py-1 rounded-full">片長 04:00</div>
+        <button id="bigPlay" class="btn absolute inset-0 m-auto w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber2 text-navy text-2xl md:text-3xl grid place-items-center hover:scale-105 transition" aria-label="播放"><i class="fa-solid fa-play ml-1"></i></button>
+        <div id="sub" class="absolute left-1/2 -translate-x-1/2 bottom-16 md:bottom-20 w-[92%] md:w-[80%] text-center bg-black/70 text-white rounded-lg px-3 py-2 text-xs md:text-base leading-relaxed"></div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 md:px-5 pb-2 md:pb-3 pt-8">
+          <div id="bar" class="relative h-2 rounded-full bg-white/30 cursor-pointer" aria-label="進度條">
+            <div id="fill" class="absolute left-0 top-0 h-2 rounded-full bg-amber2" style="width:0"></div>
+            <span class="absolute -top-1 w-4 h-4 rounded-full bg-cream border-2 border-amber2" style="left:18.75%"></span>
+            <span class="absolute -top-1 w-4 h-4 rounded-full bg-cream border-2 border-amber2" style="left:45.8%"></span>
+            <span class="absolute -top-1 w-4 h-4 rounded-full bg-cream border-2 border-amber2" style="left:70.8%"></span>
+          </div>
+          <div class="flex items-center justify-between text-cream text-sm mt-2">
+            <div class="flex items-center gap-3"><button id="miniPlay" class="btn w-8" aria-label="播放或暫停"><i class="fa-solid fa-play"></i></button><span id="clock">00:00 / 04:00</span></div>
+            <div class="flex items-center gap-4"><button id="ccBtn" class="btn font-bold border border-cream/60 rounded px-2 text-xs" aria-pressed="true"><i class="fa-regular fa-closed-captioning mr-1"></i>字幕 開</button><button id="fsBtn" class="btn" aria-label="全螢幕"><i class="fa-solid fa-expand"></i></button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-4" id="chips">
+        <button class="chip btn border-2 border-navy/30 bg-white rounded-full px-4 py-2 text-sm font-bold" data-t="45"><i class="fa-solid fa-ship mr-1"></i>00:45 歐洲大航海背景</button>
+        <button class="chip btn border-2 border-navy/30 bg-white rounded-full px-4 py-2 text-sm font-bold" data-t="110"><i class="fa-solid fa-anchor mr-1"></i>01:50 1624 荷蘭來到臺灣</button>
+        <button class="chip btn border-2 border-navy/30 bg-white rounded-full px-4 py-2 text-sm font-bold" data-t="170"><i class="fa-solid fa-landmark mr-1"></i>02:50 同時期的明末清初</button>
+      </div>
+
+      <div class="mt-4 bg-white rounded-2xl border-l-8 border-amber2 p-5 shadow-sm">
+        <p class="text-sm font-bold text-amberd mb-1"><i class="fa-solid fa-microphone mr-1"></i>本段旁白重點</p>
+        <p id="note" class="font-serif text-lg leading-relaxed"></p>
+      </div>
+    </div>
+
+    <aside class="flex flex-col gap-5">
+      <div class="bg-white rounded-2xl border-2 border-navy p-6 shadow-[6px_6px_0_#0f2347]">
+        <h3 class="font-serif font-extrabold text-xl mb-4"><i class="fa-solid fa-pen-ruler text-amberd mr-2"></i>本單元橫向記憶三步驟</h3>
+        <ol class="space-y-4">
+          <li class="flex gap-3"><span class="w-8 h-8 shrink-0 rounded-full bg-navy text-cream grid place-items-center font-bold">1</span><div><b>抓世紀錨點</b><p class="text-sm text-ink/75">先鎖定 17 世紀（1600–1699）。</p></div></li>
+          <li class="flex gap-3"><span class="w-8 h-8 shrink-0 rounded-full bg-navy text-cream grid place-items-center font-bold">2</span><div><b>鎖定臺灣事件</b><p class="text-sm text-ink/75">1624 年荷蘭人在大員建立據點。</p></div></li>
+          <li class="flex gap-3"><span class="w-8 h-8 shrink-0 rounded-full bg-navy text-cream grid place-items-center font-bold">3</span><div><b>展開東亞與歐洲大事</b><p class="text-sm text-ink/75">對照明末清初與三十年戰爭。</p></div></li>
+        </ol>
+      </div>
+      <button class="go btn bg-amber2 text-navy font-extrabold text-xl rounded-2xl px-6 py-5 shadow-[0_6px_0_#a8741a] hover:translate-y-0.5 transition" data-v="u2p">前往 AI 平行時空練習 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== 單元 2 練習頁 ===== -->
+<section id="u2p" class="view">
+  <h2 class="font-serif font-extrabold text-2xl md:text-3xl mb-4">單元 2　實作任務：拼出 17 世紀平行時空</h2>
+  <div class="bg-navy text-cream rounded-2xl p-6 mb-6 flex gap-4 items-start">
+    <i class="fa-solid fa-flag-checkered text-amber2 text-3xl mt-1"></i>
+    <p class="text-base md:text-lg leading-relaxed">任務：使用下方的同時期事件統整工具，輸入或查詢「<b class="text-amber2">17 世紀（1600–1699）</b>」，找出<b>臺灣、中國、歐洲各一件</b>同時期大事，再到右邊完成配對練習。</p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-6">
+    <div class="bg-white rounded-2xl border-2 border-navy p-6 shadow-[6px_6px_0_#0f2347]">
+      <h3 class="font-serif font-extrabold text-xl mb-4"><i class="fa-solid fa-wand-magic-sparkles text-amberd mr-2"></i>AI 統整工具</h3>
+      <a href="https://0932236055.github.io/History./" target="_blank" rel="noopener" class="btn block text-center bg-amber2 text-navy font-extrabold text-lg md:text-xl rounded-2xl px-5 py-4 shadow-[0_6px_0_#a8741a] hover:translate-y-0.5 transition"><i class="fa-solid fa-up-right-from-square mr-2"></i>開啟《歷史平行時空》AI 統整網頁</a>
+      <p class="text-sm text-ink/70 mt-2 text-center">會在新分頁開啟</p>
+      <p class="font-bold mt-5 mb-2 text-sm">使用範例：查詢「1624 年」</p>
+      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+        <div class="rounded-xl bg-cream border border-navy/20 p-3"><p class="text-amberd font-bold"><i class="fa-solid fa-location-dot mr-1"></i>臺灣</p><p class="mt-1">1624 年：荷蘭建熱蘭遮城</p></div>
+        <div class="rounded-xl bg-cream border border-navy/20 p-3"><p class="text-amberd font-bold"><i class="fa-solid fa-location-dot mr-1"></i>中國</p><p class="mt-1">明朝天啟年間</p></div>
+        <div class="rounded-xl bg-cream border border-navy/20 p-3"><p class="text-amberd font-bold"><i class="fa-solid fa-location-dot mr-1"></i>歐洲</p><p class="mt-1">三十年戰爭</p></div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl border-2 border-navy p-6 shadow-[6px_6px_0_#0f2347]">
+      <h3 class="font-serif font-extrabold text-xl mb-1"><i class="fa-solid fa-note-sticky text-amberd mr-2"></i>練習筆記與 AI 引導回饋</h3>
+      <p class="text-sm text-ink/70 mb-4">為每張年代卡選擇它發生的地區。</p>
+      <div id="match" class="space-y-3"></div>
+      <button id="check" class="btn mt-4 w-full bg-navy text-cream font-bold rounded-full px-5 py-3 text-lg hover:bg-navy2"><i class="fa-solid fa-paper-plane mr-2"></i>送出檢查</button>
+      <div id="ai" class="mt-4 hidden flex gap-3">
+        <span class="w-10 h-10 shrink-0 rounded-full bg-amber2 text-navy grid place-items-center"><i class="fa-solid fa-robot"></i></span>
+        <div class="flex-1 rounded-2xl rounded-tl-sm bg-cream border border-amber2 p-4 text-sm md:text-base leading-relaxed"><p class="font-bold text-amberd mb-1">AI 助教</p><div id="aiText"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 rounded-xl border-2 border-amber2 bg-amber2/15 px-5 py-4 text-sm md:text-base font-bold flex gap-3 items-start">
+    <i class="fa-solid fa-triangle-exclamation text-amberd mt-1"></i>
+    <p>※ 提醒：AI 統整與回饋意見僅供參考，重要歷史年代與因果關係請搭配課程影片與課本內容核對。</p>
+  </div>
+</section>
+
+<!-- ===== 單元 3 測驗頁 ===== -->
+<section id="u3" class="view">
+  <h2 class="font-serif font-extrabold text-2xl md:text-3xl mb-4">單元 3　19 世紀的連鎖反應 &amp; 跨區對照測驗</h2>
+  <div class="grid-map rounded-2xl border-2 border-amber2 p-5 md:p-6 mb-8 text-cream">
+    <p class="text-sm mb-3 text-cream/80">本單元主題：一個事件如何推倒下一個事件</p>
+    <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 text-center font-bold">
+      <div class="flex-1 rounded-xl bg-white/10 border border-white/30 p-4"><i class="fa-solid fa-industry text-amber2 text-xl mb-1"></i><p>歐洲工業革命</p></div>
+      <i class="fa-solid fa-arrow-right text-amber2 hidden md:block"></i><i class="fa-solid fa-arrow-down text-amber2 md:hidden mx-auto"></i>
+      <div class="flex-1 rounded-xl bg-white/10 border border-white/30 p-4"><i class="fa-solid fa-anchor text-amber2 text-xl mb-1"></i><p>清末開港通商</p></div>
+      <i class="fa-solid fa-arrow-right text-amber2 hidden md:block"></i><i class="fa-solid fa-arrow-down text-amber2 md:hidden mx-auto"></i>
+      <div class="flex-1 rounded-xl bg-white/10 border border-white/30 p-4"><i class="fa-solid fa-leaf text-amber2 text-xl mb-1"></i><p>臺灣茶葉與樟腦外銷</p></div>
+    </div>
+  </div>
+  <div id="quiz" class="max-w-3xl mx-auto space-y-8"></div>
+</section>
+
+</main>
+
+<script>
+/* ---------- 分頁切換 ---------- */
+const views=['u1','u2','u2p','u3'];
+function show(v){
+  if(!views.includes(v)) v='u1';
+  document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id===v));
+  document.querySelectorAll('.tab').forEach(e=>{const on=e.dataset.v===v;e.classList.toggle('on',on);if(on)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current');});
+  window.scrollTo(0,0);
+}
+function fit(){document.getElementById('main').style.paddingTop=(document.getElementById('top').offsetHeight+24)+'px';}
+window.addEventListener('resize',fit);
+document.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b)show(b.dataset.v);});
+
+/* ---------- 單元 2 影片模擬 ---------- */
+const TOTAL=240, notes=[
+ {t:0,s:'歡迎來到平行時空！今天的主角是 17 世紀。'},
+ {t:45,s:'15 世紀末起，歐洲航海家開闢新航路；荷蘭透過東印度公司，把貿易網路伸向亞洲，這是荷蘭人出現在臺灣的大背景。'},
+ {t:110,s:'1624 年，荷蘭東印度公司在大員（今臺南安平一帶）建立據點，並興建熱蘭遮城，臺灣正式連上全球貿易網路。'},
+ {t:170,s:'同一時期，中國正處於明末清初的動盪（1644 年明朝滅亡、清軍入關），歐洲則有三十年戰爭。把三地放在同一條時間軸，就能看見彼此的連動。'}];
+let cur=0,timer=null,cc=true;
+const $=id=>document.getElementById(id);
+const fmt=t=>String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');
+function seg(t){let i=0;notes.forEach((n,k)=>{if(t>=n.t)i=k;});return notes[i];}
+function paint(){
+  $('fill').style.width=(cur/TOTAL*100)+'%';
+  $('clock').textContent=fmt(cur)+' / 04:00';
+  const n=seg(cur);
+  $('note').textContent=n.s; $('sub').textContent=n.s;
+  $('sub').style.display=cc?'block':'none';
+  document.querySelectorAll('.chip').forEach(c=>{const t=+c.dataset.t;const next=notes.find(x=>x.t>t);c.classList.toggle('on',cur>=t&&(!next||cur<next.t));});
+}
+function setPlay(on){
+  const icon=on?'fa-pause':'fa-play';
+  $('miniPlay').innerHTML='<i class="fa-solid '+icon+'"></i>';
+  $('bigPlay').innerHTML='<i class="fa-solid '+icon+(on?'':' ml-1')+'"></i>';
+  $('bigPlay').style.opacity=on?'0':'1'; $('bigPlay').style.pointerEvents=on?'none':'auto';
+  clearInterval(timer);
+  if(on) timer=setInterval(()=>{cur++;if(cur>=TOTAL){cur=TOTAL;setPlay(false);}paint();},1000);
+}
+function seek(t){cur=Math.max(0,Math.min(TOTAL,t));paint();}
+function togglePlay(){setPlay(!timer||cur>=TOTAL?true:!(timer&&$('bigPlay').style.opacity==='0'));}
+$('bigPlay').onclick=$('miniPlay').onclick=()=>{const playing=$('bigPlay').style.opacity==='0';if(cur>=TOTAL)cur=0;setPlay(!playing);};
+$('player').addEventListener('click',e=>{if(e.target===$('player')){const playing=$('bigPlay').style.opacity==='0';setPlay(!playing);}});
+$('bar').onclick=e=>{const r=$('bar').getBoundingClientRect();seek(Math.round((e.clientX-r.left)/r.width*TOTAL));};
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>seek(+c.dataset.t));
+$('ccBtn').onclick=()=>{cc=!cc;$('ccBtn').innerHTML='<i class="fa-regular fa-closed-captioning mr-1"></i>字幕 '+(cc?'開':'關');$('ccBtn').setAttribute('aria-pressed',cc);paint();};
+$('fsBtn').onclick=()=>{const p=$('player');if(document.fullscreenElement)document.exitFullscreen();else if(p.requestFullscreen)p.requestFullscreen();};
+
+/* ---------- 單元 2 練習：年代配對 ---------- */
+const cards=[
+ {y:'1624',e:'荷蘭東印度公司在大員建立據點',a:'臺灣'},
+ {y:'1644',e:'明朝滅亡，清軍入關',a:'中國'},
+ {y:'1618',e:'三十年戰爭爆發',a:'歐洲'}];
+const picks={};
+function renderMatch(){
+  $('match').innerHTML=cards.map((c,i)=>`<div class="rounded-xl border-2 border-navy/20 bg-cream p-3">
+    <div class="flex items-center gap-3 mb-2"><span class="font-serif font-extrabold text-xl text-navy">${c.y} 年</span><span class="text-sm">${c.e}</span></div>
+    <div class="flex gap-2">${['臺灣','中國','歐洲'].map(r=>`<button class="reg btn flex-1 rounded-full border-2 border-navy/30 bg-white py-1.5 text-sm font-bold ${picks[i]===r?'on':''}" data-i="${i}" data-r="${r}">${r}</button>`).join('')}</div></div>`).join('');
+}
+$('match').addEventListener('click',e=>{const b=e.target.closest('.reg');if(!b)return;picks[b.dataset.i]=b.dataset.r;renderMatch();});
+$('check').onclick=()=>{
+  $('ai').classList.remove('hidden');
+  const t=$('aiText');
+  if(Object.keys(picks).length<3){t.innerHTML='還有年代卡沒選地區喔！先為三張卡都做出判斷，我再給你線索。';return;}
+  const wrong=cards.filter((c,i)=>picks[i]!==c.a);
+  if(!wrong.length){t.innerHTML='<b class="text-green-700">三張都配對正確！</b>你已經把 17 世紀的三條線排在同一條時間軸上了。下一步：想想 1644 年的中國變局，和 1624 年的荷蘭據點相隔幾年？';return;}
+  const hint={'1624':'想想「大員」是今天的哪個地方、誰會來這裡設據點？','1644':'「清軍入關」發生在哪個政權的核心地區？','1618':'「三十年戰爭」是在哪個大陸上打了三十年？'};
+  t.innerHTML='有 <b>'+wrong.length+'</b> 張需要再檢查。給你線索：<ul class="list-disc pl-5 mt-2 space-y-1">'+wrong.map(c=>`<li><b>${c.y} 年</b>：${hint[c.y]}</li>`).join('')+'</ul>';
+};
+renderMatch();
+
+/* ---------- 單元 3 測驗 ---------- */
+const Q=[
+ {q:'第 1 題（17 世紀對照）：當 1624 年荷蘭東印度公司來到臺灣大員建立據點時，中國當時正處於哪一個時期？',
+  o:['A. 唐朝盛世','B. 明朝末年','C. 清朝末年','D. 民國初年'],a:1,
+  why:['唐朝在西元 618–907 年，比 17 世紀早了約七百年。','','清朝末年已是 19 世紀末到 20 世紀初，比 1624 年晚了兩百多年。','民國初年是 1912 年後，距離 1624 年約三百年。'],
+  ok:'答對了！1624 年是明朝天啟年間，屬於明末，二十年後明朝滅亡。'},
+ {q:'第 2 題（19 世紀連鎖反應）：19 世紀中葉哪一件世界大事，間接促成清廷開放臺灣安平、淡水等通商口岸？',
+  o:['A. 歐洲工業革命與列強尋求市場','B. 羅馬帝國分裂','C. 鄭和下西洋','D. 第二次世界大戰'],a:0,
+  why:['','羅馬帝國分裂發生在古代（西元 4 世紀末），與 19 世紀無關。','鄭和下西洋是 15 世紀初的事，早於 19 世紀。','第二次世界大戰在 20 世紀，晚於 19 世紀中葉。'],
+  ok:'答對了！工業革命讓歐洲列強急需原料與市場，透過條約迫使清廷開港，臺灣的茶葉與樟腦也因此走向世界。'}];
+const state={};
+function renderQuiz(){
+  $('quiz').innerHTML=Q.map((x,qi)=>{
+    const p=state[qi];
+    let fb='';
+    if(p!==undefined){
+      fb = p===x.a
+       ? `<div class="mt-4 rounded-2xl border-2 border-green-600 bg-green-50 p-5"><p class="font-bold text-green-800 text-lg"><i class="fa-solid fa-circle-check mr-2"></i>${x.ok}</p></div>`
+       : `<div class="mt-4 rounded-2xl border-2 border-red-600 bg-red-50 p-5"><p class="font-bold text-red-800 text-lg mb-1"><i class="fa-solid fa-circle-xmark mr-2"></i>再想想！</p><p class="text-base leading-relaxed">${x.why[p]}</p><button class="go btn mt-4 bg-red-700 text-white font-bold rounded-full px-5 py-2.5" data-v="u2" data-back="1"><i class="fa-solid fa-rotate-left mr-2"></i>點擊回到影片 02:50 複習</button></div>`;
+    }
+    return `<div class="bg-white rounded-2xl border-2 border-navy p-5 md:p-6 shadow-[6px_6px_0_#0f2347]">
+      <h3 class="font-bold text-lg md:text-xl leading-relaxed mb-4">${x.q}</h3>
+      <div class="grid gap-3">${x.o.map((t,oi)=>`<button class="opt btn text-left rounded-xl border-2 border-navy/25 bg-cream px-4 py-3 text-base md:text-lg font-medium ${p===oi?(oi===x.a?'sel-ok':'sel-bad'):''}" data-q="${qi}" data-o="${oi}">${t}</button>`).join('')}</div>${fb}</div>`;
+  }).join('');
+}
+$('quiz').addEventListener('click',e=>{
+  const b=e.target.closest('.opt');
+  if(b){state[b.dataset.q]=+b.dataset.o;renderQuiz();return;}
+  if(e.target.closest('[data-back]')){seek(170);}
+});
+renderQuiz();
+
+fit(); paint(); show('u1');
+</script>
+</body>
+</html>
